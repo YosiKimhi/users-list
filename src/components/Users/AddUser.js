@@ -1,4 +1,4 @@
-import React, { useState, useRef} from 'react';
+import React, { useState, useRef } from 'react';
 import Wrapper from '../Helpers/Wrapper';
 import Button from '../UI/Button';
 import Card from '../UI/Card';
@@ -30,7 +30,7 @@ const AddUser = (props) => {
     }
     props.onAddUser(enteredName, enteredUserAge);
     nameInputRef.current.value = '';
-    ageInputRef.current.value ='';
+    ageInputRef.current.value = '';
   };
 
   const errorHandler = () => {
@@ -49,17 +49,9 @@ const AddUser = (props) => {
       <Card className={classes.input}>
         <form onSubmit={addUserHandler}>
           <label htmlFor='username'>Username</label>
-          <input
-            id='username'
-            type='text'
-            ref={nameInputRef}
-          />
+          <input id='username' type='text' ref={nameInputRef} />
           <label htmlFor='age'>Age (Years)</label>
-          <input
-            id='age'
-            type='number'
-            ref={ageInputRef}
-          />
+          <input id='age' type='number' ref={ageInputRef} />
           <Button type='submit'>Add Users</Button>
         </form>
       </Card>
